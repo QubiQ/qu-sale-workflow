@@ -1,6 +1,6 @@
 #
-Qu-sale-workflow Odoo v.11
-=============================
+Qu-sale-workflow Odoo v.10
+==========================
 
 [//]: # (addons)
 
@@ -8,6 +8,6 @@ Available addons
 ----------------
 addon | version | summary
 --- | --- | ---
-[sale_early_payment_discount](sale_early_payment_discount/) | 11.0.1.0.0 | Adds early payment discount
+[sale_quotation_number](sale_quotation_number/) | 10.0.1.0.0 | Different sequence for sale quotations
 
 [//]: # (end addons)
