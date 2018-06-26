@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_invoice_document_tax" inherit_id="account.report_invoice_document">
+        <xpath expr="//tbody[@class='invoice_tbody']/tr[1]/td[6]/span" position="attributes">
+			<attribute name="t-esc">', '.join(map(lambda x: x.name , l.invoice_line_tax_ids))</attribute>
+        </xpath>
+    </template>
+
+    <template id="report_saleorder_document_tax" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//t[@t-as='l']/tr[1]/td[5]/span" position="attributes">
+			<attribute name="t-esc">', '.join(map(lambda x: x.name , l.tax_id))</attribute>
+        </xpath>
+    </template>
+</odoo>
