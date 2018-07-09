@@ -2,11 +2,11 @@
    :target: https://www.gnu.org/licenses/agpl
    :alt: License: AGPL-3
 
-=============
+============
 Free Samples
-=============
+============
 
-This module makes sale reports appear with the tax name instead of the tax code.
+Applies 100 disccount for free samples.
 
 Installation
 ============
@@ -36,6 +36,7 @@ Credits
 Contributors
 ------------
 
+* Valentin Vinagre <valentin.vinagre@qubiq.es>
 * Oscar Navarro <oscar.navarro@qubiq.es>
 
 Do not contact contributors directly about support or help with technical issues.
