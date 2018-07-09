@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_order_form_sample" model="ir.ui.view">
+        <field name="name">view.sale.order.form.sample</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='order_line']//tree//field[@name='discount']" position="before">
+                <field name="is_sample" groups="sale.group_discount_per_so_line"/>
+            </xpath>
+
+            <xpath expr="//field[@name='order_line']//form//div[@name='discount']" position="before">
+                <label for="is_sample" groups="sale.group_discount_per_so_line"/>
+                <div name="is_sample" groups="sale.group_discount_per_so_line">
+                    <field name="is_sample"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
