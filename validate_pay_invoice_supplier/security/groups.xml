@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data noupdate="1">
+		<record id="group_accept_pay_invoice_supplier" model="res.groups">
+	        <field name="name">Accept payment supplier invoice</field>
+	        <field name="category_id" ref="base.module_category_accounting_and_finance"/>
+	        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+	        <field name="comment">
+	            Group to accept payment on supplier invoice
+	        </field>
+	    </record>
+	</data>
+</odoo>
