@@ -1,5 +1,5 @@
-.. image:: https://img.shields.io/badge/license-AGPL--3-blue.png
-   :target: https://www.gnu.org/licenses/agpl
+.. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
+   :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
 ============
@@ -24,10 +24,13 @@ Usage
 Create a sale order line and mark the "Free Sample" checkbox.
 
 
-Known issues / Roadmap
-======================
+Gestión de errores
+==================
 
-* ...
+Los errores/fallos se gestionan en `las incidencias de GitHub <https://github.com/QubiQ/qu-sale-workflow/issues>`_.
+En caso de problemas, compruebe por favor si su incidencia ha sido ya
+reportada. Si fue el primero en descubrirla, ayúdenos a solucionarla indicando
+una detallada descripción `aquí <https://github.com/QubiQ/qu-sale-workflow/issues/new>`_.
 
 
 Credits
@@ -44,10 +47,4 @@ Do not contact contributors directly about support or help with technical issues
 Maintainer
 ----------
 
-.. image:: https://pbs.twimg.com/profile_images/702799639855157248/ujffk9GL_200x200.png
-   :alt: QubiQ
-   :target: https://www.qubiq.es
-
 This module is maintained by QubiQ.
-
-To contribute to this module, please visit https://github.com/QubiQ.

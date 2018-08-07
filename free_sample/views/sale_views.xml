@@ -9,7 +9,7 @@
                 <field name="is_sample" groups="sale.group_discount_per_so_line"/>
             </xpath>
 
-            <xpath expr="//field[@name='order_line']//form//div[@name='discount']" position="before">
+            <xpath expr="//field[@name='order_line']//form//div[@name='discount']" position="after">
                 <label for="is_sample" groups="sale.group_discount_per_so_line"/>
                 <div name="is_sample" groups="sale.group_discount_per_so_line">
                     <field name="is_sample"/>
