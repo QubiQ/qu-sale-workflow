@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="report_picking_document" inherit_id="stock.report_picking">
+		<xpath expr="//div[@class='col-xs-5 col-xs-offset-1']" position="inside">
+			<t t-if="picking_type_id == 1">
+				<span><strong>Delivery Hour: </strong></span>
+				<t t-esc="'%02d:%02d' % (int(o.delivery_hour), o.delivery_hour % 1 * 60)"/>
+			</t>
+		</xpath>
+	</template>
+</odoo>

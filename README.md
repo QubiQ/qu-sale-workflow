@@ -12,5 +12,6 @@ addon | version | summary
 [free_sample](free_sample/) | 11.0.1.0.0 | Applies 100 disccount for free samples
 [invoices_sale_orders_validation](invoices_sale_orders_validation/) | 11.0.1.0.0 | Restriction amount untaxed in sale orders and client invoices
 [pricelist_triple_discount](pricelist_triple_discount/) | 11.0.1.0.0 | Añade 3 descuentos en la pricelist
+[delivery_time](delivery_time/) | 11.0.1.0.0 | Specify a delivery hour for sale orders and stock pickings
 
 [//]: # (end addons)

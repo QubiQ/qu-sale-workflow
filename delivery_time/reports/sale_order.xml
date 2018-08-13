@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="report_saleorder_document" inherit_id="sale.report_saleorder_document">
+		<xpath expr="//div[@class='col-xs-5 col-xs-offset-1']" position="inside">
+			<span><strong>Delivery Hour: </strong></span>
+			<t t-esc="'%02d:%02d' % (int(doc.delivery_hour), doc.delivery_hour % 1 * 60)"/>
+		</xpath>
+	</template>
+</odoo>
