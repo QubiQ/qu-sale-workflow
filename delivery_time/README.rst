@@ -3,10 +3,10 @@
 	:alt: License: AGPL-3
 
 =============
-Delivery Hour
+Delivery Time
 =============
 
-Allows to specify a delivery hour for sale orders and stock pickings for every partner.
+Allows to specify a delivery time for sale orders and stock pickings for every partner.
 
 
 Configuration
@@ -18,7 +18,7 @@ Just install
 Usage
 =====
 
-Specify the delivery hour for a partner. When a sale order or a stock picking is created, it gets the partner's delivery hour.
+Specify the delivery time for a partner. When a sale order or a stock picking is created, it gets the partner's delivery hour.
 
 
 Gestión de errores

@@ -3,8 +3,8 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
 {
-    "name": "Delivery Hour",
-    "summary": "Set a delivery hour for every partner",
+    "name": "Delivery Time",
+    "summary": "Set a delivery time for every partner",
     "version": "11.0.1.0.0",
     "category": "Delivery",
     "website": "https://www.qubiq.es",

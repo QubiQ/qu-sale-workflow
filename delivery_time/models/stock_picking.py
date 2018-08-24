@@ -8,7 +8,7 @@ from odoo import fields, models, api, _
 class StockPicking(models.Model):
     _inherit = 'stock.picking'
 
-    delivery_hour = fields.Float(
+    delivery_hour = fields.Char(
         string=_("Delivery Hour")
     )
 

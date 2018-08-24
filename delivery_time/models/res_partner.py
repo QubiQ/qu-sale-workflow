@@ -8,6 +8,6 @@ from odoo import fields, models, _
 class ResPartner(models.Model):
     _inherit = 'res.partner'
 
-    delivery_hour = fields.Float(
+    delivery_hour = fields.Char(
         string=_("Delivery Hour")
     )

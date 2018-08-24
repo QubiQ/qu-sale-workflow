@@ -4,7 +4,7 @@
 		<xpath expr="//div[@class='col-xs-5 col-xs-offset-1']" position="inside">
 			<t t-if="picking_type_id == 1">
 				<span><strong>Delivery Hour: </strong></span>
-				<t t-esc="'%02d:%02d' % (int(o.delivery_hour), o.delivery_hour % 1 * 60)"/>
+				<t t-esc="o.delivery_hour"/>
 			</t>
 		</xpath>
 	</template>

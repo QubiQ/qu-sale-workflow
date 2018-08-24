@@ -8,7 +8,7 @@ from odoo import fields, models, api, _
 class SaleOrder(models.Model):
     _inherit = 'sale.order'
 
-    delivery_hour = fields.Float(
+    delivery_hour = fields.Char(
         string=_("Delivery Hour")
     )
 
