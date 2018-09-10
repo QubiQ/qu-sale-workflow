@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sale_promotion_form_view" model="ir.ui.view">
+        <field name="name">sale.promotion.form</field>
+        <field name="model">sale.promotion</field>
+        <field name="arch" type="xml">
+            <form string="Promotions program">
+                <header>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="date_from"/>
+                        <field name="date_to"/>
+                        <field name="promo_type"/>
+                        <field name="is_free_product" invisible="1"/>
+                    </group>
+                    <group attrs="{'invisible':[('promo_type','=',False)]}">
+                        <group>
+                            <field name="product_qty"/>
+                            <field name="product_free_qty"/>
+                            <field name="product_free" attrs="{'invisible':[('is_free_product','=',False)]}"/>
+                        </group>
+                        <group>
+                        </group>
+                        <separator string="Products"/>
+                        <field name="products" domain="[('type','!=', 'service')]">
+                            <tree>
+                                <field name="default_code"/>
+                                <field name="name"/>
+                            </tree>
+                        </field>
+                        <separator string="Partners"/>
+                        <field name="partners" domain="[('customer','=', True)]">
+                            <tree>
+                                <field name="name"/>
+                            </tree>
+                        </field>
+                    </group>
+               </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="sale_promotion_search" model="ir.ui.view">
+        <field name="name">sale.promotion.search</field>
+        <field name="model">sale.promotion</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="partners"/>
+                <field name="products"/>
+                <group expand="0" position="inside">
+                    <filter string="Promotion type" domain="[]" context="{'group_by':'promo_type'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="sale_promotion_tree" model="ir.ui.view">
+        <field name="name">sale.promotion.tree</field>
+        <field name="model">sale.promotion</field>
+        <field name="arch" type="xml">
+            <tree string="Promotions">
+                <field name="name"/>
+                <field name="date_from"/>
+                <field name="date_to"/>
+                <field name="promo_type"/>
+            </tree>
+        </field>
+
+    </record>
+
+    <record id="sale_promotion_view_all" model="ir.actions.act_window">
+        <field name="name">Promotions</field>
+        <field name="res_model">sale.promotion</field>
+        <field name="view_type">form</field>
+        <field name="domain">[]</field>
+        <field name="view_id" ref="sale_promotion_tree"/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Create a new Promotion
+            </p>
+        </field>
+    </record>
+
+    <menuitem action="sale_promotion_view_all" id="sale_promotion_menu" name="Promotions" parent="sale.product_menu_catalog" groups="sales_team.group_sale_salesman" sequence="4"/>
+
+</odoo>

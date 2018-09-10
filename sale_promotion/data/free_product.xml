@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="free_product" model="product.product">
+            <field name="name">FREE</field>
+            <field name="type">service</field>
+            <field name="company_id"></field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sale_order_promotion_form_view" model="ir.ui.view">
+        <field name="name">sale.order.promotion.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale_commission.view_order_agent_form_inherit"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='recompute_lines_agents']" position="after">
+                <button name="recompute_promotions" type="object" string="Recompute Promotions" states="draft"></button>
+            </xpath>
+        </field>
+    </record>
+</odoo>
