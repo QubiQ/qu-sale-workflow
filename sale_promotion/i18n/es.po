@@ -1,0 +1,174 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* sale_promotion
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-10 07:42+0000\n"
+"PO-Revision-Date: 2018-09-10 07:42+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_promotion
+#: model:ir.model,name:sale_promotion.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: sale_promotion
+#: model:ir.actions.act_window,help:sale_promotion.sale_promotion_view_all
+msgid "Create a new Promotion"
+msgstr "Crea una nueva promoción"
+
+#. module: sale_promotion
+#: model:ir.model.fields,field_description:sale_promotion.field_sale_promotion_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: sale_promotion
+#: model:ir.model.fields,field_description:sale_promotion.field_sale_promotion_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: sale_promotion
+#: model:ir.model.fields,field_description:sale_promotion.field_sale_promotion_display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: sale_promotion
+#: model:ir.model.fields,field_description:sale_promotion.field_sale_promotion_date_to
+msgid "Ending Date"
+msgstr "Fecha de finalización"
+
+#. module: sale_promotion
+#: model:product.product,name:sale_promotion.free_product
+#: model:product.template,name:sale_promotion.free_product_product_template
+msgid "FREE"
+msgstr "GRATIS"
+
+#. module: sale_promotion
+#: model:ir.model.fields,field_description:sale_promotion.field_sale_promotion_product_free
+msgid "Free Product"
+msgstr "Product gratuito"
+
+#. module: sale_promotion
+#: model:ir.model.fields,field_description:sale_promotion.field_sale_promotion_id
+msgid "ID"
+msgstr "ID (identificación)"
+
+#. module: sale_promotion
+#: model:ir.model.fields,field_description:sale_promotion.field_sale_order_line_is_free
+msgid "Is free"
+msgstr "Es gratis"
+
+#. module: sale_promotion
+#: model:ir.model.fields,field_description:sale_promotion.field_sale_promotion_is_free_product
+msgid "Is free product"
+msgstr "Es un producto gratis"
+
+#. module: sale_promotion
+#: model:ir.model.fields,field_description:sale_promotion.field_sale_promotion___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: sale_promotion
+#: model:ir.model.fields,field_description:sale_promotion.field_sale_promotion_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización de"
+
+#. module: sale_promotion
+#: model:ir.model.fields,field_description:sale_promotion.field_sale_promotion_write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: sale_promotion
+#: model:ir.model.fields,field_description:sale_promotion.field_sale_promotion_name
+msgid "Name of promotion"
+msgstr "Nombre de la promoción"
+
+#. module: sale_promotion
+#: model:ir.model.fields,field_description:sale_promotion.field_sale_promotion_partners
+#: model:ir.ui.view,arch_db:sale_promotion.sale_promotion_form_view
+msgid "Partners"
+msgstr "Empresas"
+
+#. module: sale_promotion
+#: selection:sale.promotion,promo_type:0
+msgid "Product free"
+msgstr "Producto gratuito"
+
+#. module: sale_promotion
+#: model:ir.model.fields,field_description:sale_promotion.field_sale_promotion_products
+#: model:ir.ui.view,arch_db:sale_promotion.sale_promotion_form_view
+msgid "Products"
+msgstr "Productos"
+
+#. module: sale_promotion
+#: model:ir.model.fields,field_description:sale_promotion.field_res_partner_promotion_id
+#: model:ir.model.fields,field_description:sale_promotion.field_res_users_promotion_id
+msgid "Promotion"
+msgstr "Promociones"
+
+#. module: sale_promotion
+#: model:ir.model,name:sale_promotion.model_sale_promotion
+msgid "Promotion models"
+msgstr "Promotion models"
+
+#. module: sale_promotion
+#: model:ir.model.fields,field_description:sale_promotion.field_sale_promotion_promo_type
+#: model:ir.ui.view,arch_db:sale_promotion.sale_promotion_search
+msgid "Promotion type"
+msgstr "Tipo de promoción"
+
+#. module: sale_promotion
+#: model:ir.actions.act_window,name:sale_promotion.sale_promotion_view_all
+#: model:ir.ui.menu,name:sale_promotion.sale_promotion_menu
+#: model:ir.ui.view,arch_db:sale_promotion.sale_promotion_tree
+msgid "Promotions"
+msgstr "Promociones"
+
+#. module: sale_promotion
+#: model:ir.ui.view,arch_db:sale_promotion.sale_promotion_form_view
+msgid "Promotions program"
+msgstr "Programa de promociones"
+
+#. module: sale_promotion
+#: model:ir.model.fields,field_description:sale_promotion.field_sale_promotion_product_free_qty
+msgid "Quantity of free products"
+msgstr "Cantidad de productos gratuitos"
+
+#. module: sale_promotion
+#: model:ir.model.fields,field_description:sale_promotion.field_sale_promotion_product_qty
+msgid "Quantity of products"
+msgstr "Cantidad de productos"
+
+#. module: sale_promotion
+#: selection:sale.promotion,promo_type:0
+msgid "Quantity x Quantity"
+msgstr "Cantidad x Cantidad"
+
+#. module: sale_promotion
+#: model:ir.model,name:sale_promotion.model_sale_order
+msgid "Quotation"
+msgstr "Presupuesto"
+
+#. module: sale_promotion
+#: model:ir.ui.view,arch_db:sale_promotion.sale_order_promotion_form_view
+msgid "Recompute Promotions"
+msgstr "Recalcular promociones"
+
+#. module: sale_promotion
+#: model:ir.model,name:sale_promotion.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línea de pedido de ventas"
+
+#. module: sale_promotion
+#: model:ir.model.fields,field_description:sale_promotion.field_sale_promotion_date_from
+msgid "Starting Date"
+msgstr "Fecha de inicio"
+

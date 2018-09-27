@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+		<record id="ir_model_access_sale_promotion" model="ir.model.access">
+			<field name="name">access_sale_promotion</field>
+			<field name="model_id" ref="model_sale_promotion"/>
+			<field name="group_id" ref="sales_team.group_sale_salesman"/>
+			<field eval="1" name="perm_read"/>
+			<field eval="0" name="perm_unlink"/>
+			<field eval="0" name="perm_write"/>
+			<field eval="0" name="perm_create"/>
+		</record>
+
+		<record id="ir_model_full_access_sale_promotion" model="ir.model.access">
+			<field name="name">full_access_sale_promotion</field>
+			<field name="model_id" ref="model_sale_promotion"/>
+			<field name="group_id" ref="sales_team.group_sale_manager"/>
+			<field eval="1" name="perm_read"/>
+			<field eval="1" name="perm_unlink"/>
+			<field eval="1" name="perm_write"/>
+			<field eval="1" name="perm_create"/>
+		</record>
+
+	</data>
+</odoo>
