@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="validate_product_product_template_common_form" model="ir.ui.view">
+        <field name="name">validate.product.product.template.common.form</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='toggle_active']" position="attributes">
+                <attribute name="groups">validate_product.group_validate_products</attribute>
+            </xpath>
+            <field name="company_id" position="after">
+                <field name="validation" invisible="1"/>
+                <field name="validated" attrs="{'readonly': [('active', '=', True)], 'invisible': [('validation', '=', False)]}" groups="validate_product.group_validate_products"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="validate_product_template_search_view" model="ir.ui.view">
+        <field name="name">validate.product.template.search</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_search_view"/>
+        <field name="arch" type="xml">
+            <filter name="filter_to_sell" position="after">
+                <filter string="To validate" name="to_validate" icon="terp-accessories-archiver-minus" domain="[('validated','=',0)]"/>
+            </filter>
+        </field>
+    </record>
+
+    <record id="validation_product_template_action" model="ir.actions.act_window">
+        <field name="name">Validate products</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.template</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="domain">[('active','=',False)]</field>
+        <field name="view_type">form</field>
+        <field name="view_id" ref="product.product_template_kanban_view"/>
+        <field name="context">{"search_default_to_validate":1}</field>
+    </record>
+
+    <menuitem action="validation_product_template_action"
+        id="validation_menu_product_template_action"
+        parent="sales_team.menu_sales" sequence="6"
+        groups="validate_partner.group_validate_products"/>
+
+</odoo>
