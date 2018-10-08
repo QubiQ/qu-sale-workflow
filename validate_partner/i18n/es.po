@@ -1,0 +1,60 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* validate_partner
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-01 19:01+0000\n"
+"PO-Revision-Date: 2018-10-01 21:01+0200\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: validate_partner
+#: model:ir.model,name:validate_partner.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: validate_partner
+#: model:ir.model,name:validate_partner.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: validate_partner
+#: model:ir.ui.view,arch_db:validate_partner.validate_partner_view_res_partner_filter
+msgid "To validate"
+msgstr "Por validar"
+
+#. module: validate_partner
+#: code:addons/validate_partner/models/res_company.py:12
+#: model:ir.actions.act_window,name:validate_partner.validation_partner_template_action
+#: model:ir.actions.server,name:validate_partner.action_value_validate_partners
+#: model:ir.model.fields,field_description:validate_partner.field_res_company_validate_partners
+#: model:ir.ui.menu,name:validate_partner.validation_menu_partner_template_action
+#: model:res.groups,name:validate_partner.group_validate_partners
+#, python-format
+msgid "Validate partners"
+msgstr "Validar clientes"
+
+#. module: validate_partner
+#: code:addons/validate_partner/models/res_partner.py:11
+#: model:ir.model.fields,field_description:validate_partner.field_res_partner_validated
+#: model:ir.model.fields,field_description:validate_partner.field_res_users_validated
+#, python-format
+msgid "Validated"
+msgstr "Validado"
+
+#. module: validate_partner
+#: code:addons/validate_partner/models/res_partner.py:17
+#: model:ir.model.fields,field_description:validate_partner.field_res_partner_validation
+#: model:ir.model.fields,field_description:validate_partner.field_res_users_validation
+#, python-format
+msgid "Validation"
+msgstr "Validación"

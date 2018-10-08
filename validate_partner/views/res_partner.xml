@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="validate_partner_view_partner_form" model="ir.ui.view">
+        <field name="name">validate.partner.view.partner.form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='toggle_active']" position="attributes">
+                <attribute name="groups">validate_partner.group_validate_partners</attribute>
+            </xpath>
+            <field name="lang" position="after">
+                <field name="validation" invisible="1"/>
+                <field name="validated" attrs="{'readonly': [('active', '=', True)], 'invisible': [('validation', '=', False)]}" groups="validate_partner.group_validate_partners"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="validate_partner_view_res_partner_filter" model="ir.ui.view">
+        <field name="name">validate.partner.view.res.partner.filter</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <filter name="supplier" position="after">
+                <filter string="To validate" name="to_validate" icon="terp-accessories-archiver-minus" domain="[('validated', '=', False)]"/>
+            </filter>
+        </field>
+    </record>
+
+    <record id="validation_partner_template_action" model="ir.actions.act_window">
+        <field name="name">Validate partners</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="domain">[('active','=',False)]</field>
+        <field name="view_type">form</field>
+        <field name="view_id" ref="base.res_partner_kanban_view"/>
+        <field name="context">{"search_default_to_validate":1}</field>
+    </record>
+
+    <menuitem action="validation_partner_template_action"
+        id="validation_menu_partner_template_action"
+        parent="sale.sale_order_menu" sequence="3"
+        groups="validate_partner.group_validate_partners"/>
+
+    <record id="action_value_validate_partners" model="ir.actions.server">
+        <field name="name">Validate partners</field>
+        <field name="model_id" ref="validate_partner.model_res_partner"/>
+        <field name="binding_model_id" ref="validate_partner.model_res_partner"/>
+        <field name="state">code</field>
+        <field name="code">model.validate_partners()</field>
+    </record>
+</odoo>
