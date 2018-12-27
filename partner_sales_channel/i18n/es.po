@@ -1,0 +1,144 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* partner_sales_channel
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-21 14:30+0000\n"
+"PO-Revision-Date: 2018-12-21 15:31+0100\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.2\n"
+
+#. module: partner_sales_channel
+#: model:ir.model,name:partner_sales_channel.model_report_all_channels_sales
+msgid "All sales orders grouped by sales channels"
+msgstr "Todos los pedidos de venta agrupados por canal"
+
+#. module: partner_sales_channel
+#: model:ir.model,name:partner_sales_channel.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: partner_sales_channel
+#: model:ir.model.fields,field_description:partner_sales_channel.field_partner_division_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: partner_sales_channel
+#: model:ir.model.fields,field_description:partner_sales_channel.field_partner_division_create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: partner_sales_channel
+#: model:ir.model.fields,field_description:partner_sales_channel.field_partner_division_display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: partner_sales_channel
+#: code:addons/partner_sales_channel/models/account_invoice.py:13
+#: code:addons/partner_sales_channel/models/pos_sale_report.py:13
+#: code:addons/partner_sales_channel/models/res_partner.py:13
+#: code:addons/partner_sales_channel/models/sale_order.py:13
+#: code:addons/partner_sales_channel/models/sale_report.py:13
+#: model:ir.model.fields,field_description:partner_sales_channel.field_account_invoice_division_id
+#: model:ir.model.fields,field_description:partner_sales_channel.field_report_all_channels_sales_division_id
+#: model:ir.model.fields,field_description:partner_sales_channel.field_res_partner_division_id
+#: model:ir.model.fields,field_description:partner_sales_channel.field_res_users_division_id
+#: model:ir.model.fields,field_description:partner_sales_channel.field_sale_order_division_id
+#: model:ir.model.fields,field_description:partner_sales_channel.field_sale_report_division_id
+#, python-format
+msgid "Division"
+msgstr "División"
+
+#. module: partner_sales_channel
+#: code:addons/partner_sales_channel/models/partner_division.py:26
+#, python-format
+msgid "Division name must be unique!"
+msgstr "El nombre de la división debe ser único!"
+
+#. module: partner_sales_channel
+#: code:addons/partner_sales_channel/models/crm_team.py:13
+#: model:ir.model.fields,field_description:partner_sales_channel.field_crm_team_division_ids
+#, python-format
+msgid "Divisions"
+msgstr "Divisiones"
+
+#. module: partner_sales_channel
+#: model:ir.model.fields,field_description:partner_sales_channel.field_partner_division_id
+msgid "ID"
+msgstr "ID"
+
+#. module: partner_sales_channel
+#: model:ir.model,name:partner_sales_channel.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: partner_sales_channel
+#: model:ir.model.fields,field_description:partner_sales_channel.field_partner_division___last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: partner_sales_channel
+#: model:ir.model.fields,field_description:partner_sales_channel.field_partner_division_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización de"
+
+#. module: partner_sales_channel
+#: model:ir.model.fields,field_description:partner_sales_channel.field_partner_division_write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: partner_sales_channel
+#: code:addons/partner_sales_channel/models/partner_division.py:13
+#: model:ir.model.fields,field_description:partner_sales_channel.field_partner_division_name
+#, python-format
+msgid "Name"
+msgstr "Nombre"
+
+#. module: partner_sales_channel
+#: model:ir.actions.act_window,name:partner_sales_channel.partner_division_action
+#: model:ir.ui.menu,name:partner_sales_channel.partner_division_menu
+#: model:ir.ui.view,arch_db:partner_sales_channel.partner_division_form_view
+#: model:ir.ui.view,arch_db:partner_sales_channel.partner_division_tree_view
+msgid "Partner Divisions"
+msgstr "Divisiones de clientes"
+
+#. module: partner_sales_channel
+#: model:ir.model,name:partner_sales_channel.model_sale_order
+msgid "Quotation"
+msgstr "Presupuesto"
+
+#. module: partner_sales_channel
+#: model:ir.model,name:partner_sales_channel.model_crm_team
+msgid "Sales Channel"
+msgstr "Canal de ventas"
+
+#. module: partner_sales_channel
+#: code:addons/partner_sales_channel/models/partner_division.py:17
+#: model:ir.model.fields,field_description:partner_sales_channel.field_partner_division_sales_channel_ids
+#, python-format
+msgid "Sales Channels"
+msgstr "Canales de ventas"
+
+#. module: partner_sales_channel
+#: model:ir.model,name:partner_sales_channel.model_sale_report
+msgid "Sales Orders Statistics"
+msgstr "Estadísticas pedidos de ventas"
+
+#. module: partner_sales_channel
+#: model:ir.actions.act_window,help:partner_sales_channel.partner_division_action
+msgid "Select to create new Partner Division"
+msgstr "Selecciona para crear una nueva división de cliente"
+
+#. module: partner_sales_channel
+#: model:ir.model,name:partner_sales_channel.model_partner_division
+msgid "partner.division"
+msgstr "partner.division"
