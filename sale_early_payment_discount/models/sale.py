@@ -19,29 +19,30 @@ class SaleOrder(models.Model):
     @api.depends('order_line.price_total', 'early_payment_discount')
     def _amount_all(self):
         super(SaleOrder, self)._amount_all()
-        if not self.early_payment_discount:
-            self.early_payment_disc_total = self.amount_total
-            self.early_payment_disc_tax = self.amount_tax
-            self.early_payment_disc_untaxed = self.amount_untaxed
-        else:
-            cur = self.pricelist_id.currency_id
-            val = val1 = 0
-            for line in self.order_line:
-                if line.product_id and line.product_id.without_early_payment:
-                    val1 += line.price_subtotal
-                    val += line.price_tax
-                else:
-                    val1 += line.price_subtotal * \
-                        (1.0 - (float(self.early_payment_discount or 0.0)) /
-                         100.0)
-                    val += line.price_tax * \
-                        (1.0 - (float(self.early_payment_discount or 0.0)) /
-                         100.0)
-            self.early_payment_disc_tax = cur.round(val)
-            self.early_payment_disc_untaxed = cur.round(val1)
-            self.early_payment_disc_total = cur.round(val+val1)
-            self.total_early_discount = self.early_payment_disc_untaxed - \
-                self.amount_untaxed
+        for sel in self:
+            if not sel.early_payment_discount:
+                sel.early_payment_disc_total = sel.amount_total
+                sel.early_payment_disc_tax = sel.amount_tax
+                sel.early_payment_disc_untaxed = sel.amount_untaxed
+            else:
+                cur = sel.pricelist_id.currency_id
+                val = val1 = 0
+                for line in sel.order_line:
+                    if line.product_id and line.product_id.without_early_payment:
+                        val1 += line.price_subtotal
+                        val += line.price_tax
+                    else:
+                        val1 += line.price_subtotal * \
+                            (1.0 - (float(sel.early_payment_discount or 0.0)) /
+                             100.0)
+                        val += line.price_tax * \
+                            (1.0 - (float(sel.early_payment_discount or 0.0)) /
+                             100.0)
+                sel.early_payment_disc_tax = cur.round(val)
+                sel.early_payment_disc_untaxed = cur.round(val1)
+                sel.early_payment_disc_total = cur.round(val+val1)
+                sel.total_early_discount = sel.early_payment_disc_untaxed - \
+                    sel.amount_untaxed
 
     @api.onchange('partner_id')
     def onchange_partner_id(self):
