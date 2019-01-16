@@ -2,8 +2,8 @@
 # © 2017 Comunitea
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from openerp import models, fields, api, exceptions, _
-import openerp.addons.decimal_precision as dp
+from odoo import models, fields, api, exceptions, _
+from odoo.addons import decimal_precision as dp
 
 
 class SaleOrder(models.Model):

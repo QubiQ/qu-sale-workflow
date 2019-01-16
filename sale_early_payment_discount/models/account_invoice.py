@@ -1,14 +1,21 @@
 # -*- coding: utf-8 -*-
 # © 2017 Comunitea
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
-from openerp import models, fields, api, exceptions, _
-import openerp.addons.decimal_precision as dp
+from odoo import models, fields, api, exceptions, _
+from odoo.addons import decimal_precision as dp
 import time
+import logging
+
 
 def intersect(la, lb):
     """returns True for equal keys in two lists"""
-    l = filter(lambda x: x in lb, la)
+    l = list(filter(lambda x: x in lb, la))
+    logging.info('-->> AQUI')
+    logging.info(l)
+    logging.info(la)
+    logging.info(lb)
     return len(l) == len(la) == len(lb)
+
 
 class AccountInvoice(models.Model):
 

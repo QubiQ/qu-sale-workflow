@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
+<odoo>
     <data>
-
         <record id="view_partner_form_add_early_payment_discounts" model="ir.ui.view">
             <field name="name">res.partner.property.form.add_early_payment_discounts</field>
             <field name="model">res.partner</field>
@@ -13,6 +12,5 @@
                 </field>
             </field>
         </record>
-
     </data>
-</openerp>
+</odoo>
