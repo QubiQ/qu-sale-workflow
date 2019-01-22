@@ -3,7 +3,7 @@
 
 {
     'name': 'Sale Promotion',
-    'version': '11.0.1.0.0',
+    'version': '11.0.1.0.1',
     'author': 'QubiQ',
     'category': 'Custom / Sales',
     'license': 'AGPL-3',

@@ -38,8 +38,6 @@ class SaleOrder(models.Model):
                         if len(prod_dic[line.product_id.id]) < 3:
                             prod_dic[line.product_id.id].append(
                                 line.price_unit)
-                            prod_dic[line.product_id.id].append(
-                                line.tax_id.id)
 
                 for promo in promotions:
                     for k, v in prod_dic.items():
@@ -88,33 +86,38 @@ class SaleOrder(models.Model):
                         if isinstance(free_prod, (list,)):
                             # Get the promo with the most value
                             if len(free_prod) == 3:
-                                if prod_obj.list_price > higher:
+                                if prod_obj.list_price >= higher:
                                     higher = prod_obj.list_price
                                     prod_obj_def = prod_obj
-                                    no_value = True
+                                    no_value = False
                             else:
-                                if prod_dic[i][1] > higher:
+                                if prod_dic[i][1] >= higher:
                                     higher = prod_dic[i][1]
                                     prod_obj_def = prod_obj
-                                    no_value = False
+                                    no_value = True
                     if no_value:
-                        higher = 0
+                        higher = -higher
                         prod_line_obj = prod_obj_def
                     else:
                         prod_line_obj = sel.env.ref(
                             'sale_promotion.free_product')
-                        higher = -higher
+                        higher = 0
 
-                    # Create line with the most valuable promo
-                    sel.write({
-                        'order_line': [(0, 0, {
-                            'product_id': prod_line_obj.id,
-                            'name': prod_obj_def.name,
-                            'product_uom_qty': prod_promo_dic[i][0][1],
-                            'price_unit': higher,
-                            'is_free': True,
-                        })]
-                    })
+                taxes = sel.order_line.tax_id
+                tax_list = []
+                for tax in taxes:
+                    tax_list.append(tax.id)
+                # Create line with the most valuable promo
+                sel.write({
+                    'order_line': [(0, 0, {
+                        'product_id': prod_line_obj.id,
+                        'name': prod_obj_def.name,
+                        'product_uom_qty': prod_promo_dic[i][0][1],
+                        'price_unit': higher,
+                        'tax_id': [(6, 0, tax_list)],
+                        'is_free': True,
+                    })]
+                })
             else:
                 # Unlink all promos if no one is found when recalculating
                 for line in sel.order_line:
