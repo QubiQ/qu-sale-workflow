@@ -1,0 +1,48 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_attribute_values_limit
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-14 12:48+0000\n"
+"PO-Revision-Date: 2019-02-14 13:49+0100\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: product_attribute_values_limit
+#: code:addons/product_attribute_values_limit/models/product_attribute.py:12
+#: model:ir.model.fields,help:product_attribute_values_limit.field_product_attribute_unique_value
+#, python-format
+msgid "Check to allow just one value for this attribute"
+msgstr "Marca para permitir un solo valor para este atributo"
+
+#. module: product_attribute_values_limit
+#: model:ir.model,name:product_attribute_values_limit.model_product_attribute
+msgid "Product Attribute"
+msgstr "Atributo de producto"
+
+#. module: product_attribute_values_limit
+#: model:ir.model,name:product_attribute_values_limit.model_product_template
+msgid "Product Template"
+msgstr "Plantilla de producto"
+
+#. module: product_attribute_values_limit
+#: code:addons/product_attribute_values_limit/models/product_attribute.py:11
+#: model:ir.model.fields,field_description:product_attribute_values_limit.field_product_attribute_unique_value
+#, python-format
+msgid "Unique Value"
+msgstr "Valor único"
+
+#. module: product_attribute_values_limit
+#: code:addons/product_attribute_values_limit/models/product_template.py:16
+#, python-format
+msgid "You cannot add more than one value for the attribute !"
+msgstr "No puedes añadir más de un valor para el atributo !"
