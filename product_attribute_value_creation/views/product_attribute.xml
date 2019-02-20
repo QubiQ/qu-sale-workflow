@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 Xavier Piernas <xavier.piernas@qubiq.es>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="attribute_tree_view" model="ir.ui.view">
+        <field name="name">attribute.tree.view</field>
+        <field name="model">product.attribute</field>
+        <field name="inherit_id" ref="product.attribute_tree_view"/>
+        <field name="arch" type="xml">
+        	<xpath expr="//tree" position="inside">
+        		<field name="no_create"/>
+        	</xpath>
+        </field>
+    </record>
+</odoo>
