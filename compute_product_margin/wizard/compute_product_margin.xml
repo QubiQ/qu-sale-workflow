@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 Xavier Piernas <xavier.piernas@qubiq.es>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="compute_product_margin_form_view" model="ir.ui.view">
+        <field name="name">compute.product.margin.form.view</field>
+        <field name="model">compute.product.margin</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Compute Product Margin">
+                Select the categories to compute the product margin. Leave it empty to apply to all the categories.
+                <field name="category_ids"/>
+                <button name="compute_product_margin" type="object" string="Compute Product Margin"/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_compute_product_margin" model="ir.actions.act_window">
+        <field name="name">Compute Product Margin</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">compute.product.margin</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="compute_product_margin_form_view"/>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_compute_product_margin" action="action_compute_product_margin" name="Compute Product Margin" parent="sale.prod_config_main"/>
+</odoo>

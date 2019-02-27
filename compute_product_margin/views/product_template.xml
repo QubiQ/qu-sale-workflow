@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 Xavier Piernas <xavier.piernas@qubiq.es>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="product_template_form_view" model="ir.ui.view">
+        <field name="name">product.template.form.view</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+        	<xpath expr="//page[@name='general_information']" position="inside">
+        		<group name="product_margin" string="Product Margin">
+        			<group>
+        				<field name="base_price"/>
+        				<field name="profit_percent"/>
+        				<button name="compute_product_margin" type="object" string="Compute Product Margin"/>
+        			</group>
+        		</group>
+        	</xpath>
+        </field>
+    </record>
+</odoo>

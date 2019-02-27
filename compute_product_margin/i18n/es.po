@@ -1,0 +1,132 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* compute_product_margin
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-22 14:49+0000\n"
+"PO-Revision-Date: 2019-02-22 15:50+0100\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: compute_product_margin
+#: code:addons/compute_product_margin/models/product_template.py:14
+#: model:ir.model.fields,field_description:compute_product_margin.field_product_product_base_price
+#: model:ir.model.fields,field_description:compute_product_margin.field_product_template_base_price
+#, python-format
+msgid "Base Price"
+msgstr "Precio base"
+
+#. module: compute_product_margin
+#: code:addons/compute_product_margin/wizard/compute_product_margin.py:13
+#: model:ir.model.fields,field_description:compute_product_margin.field_compute_product_margin_category_ids
+#, python-format
+msgid "Categories"
+msgstr "Categorías"
+
+#. module: compute_product_margin
+#: model:ir.actions.act_window,name:compute_product_margin.action_compute_product_margin
+#: model:ir.ui.menu,name:compute_product_margin.menu_compute_product_margin
+#: model:ir.ui.view,arch_db:compute_product_margin.compute_product_margin_form_view
+#: model:ir.ui.view,arch_db:compute_product_margin.product_category_form_view
+#: model:ir.ui.view,arch_db:compute_product_margin.product_template_form_view
+msgid "Compute Product Margin"
+msgstr "Calcular margen de producto"
+
+#. module: compute_product_margin
+#: model:ir.model.fields,field_description:compute_product_margin.field_compute_product_margin_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: compute_product_margin
+#: model:ir.model.fields,field_description:compute_product_margin.field_compute_product_margin_create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: compute_product_margin
+#: model:ir.model.fields,field_description:compute_product_margin.field_compute_product_margin_display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: compute_product_margin
+#: model:ir.model.fields,field_description:compute_product_margin.field_compute_product_margin_id
+msgid "ID"
+msgstr "ID"
+
+#. module: compute_product_margin
+#: model:ir.model.fields,field_description:compute_product_margin.field_compute_product_margin___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: compute_product_margin
+#: model:ir.model.fields,field_description:compute_product_margin.field_compute_product_margin_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: compute_product_margin
+#: model:ir.model.fields,field_description:compute_product_margin.field_compute_product_margin_write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: compute_product_margin
+#: model:ir.model,name:compute_product_margin.model_product_category
+msgid "Product Category"
+msgstr "Categoría de producto"
+
+#. module: compute_product_margin
+#: model:ir.ui.view,arch_db:compute_product_margin.product_category_form_view
+#: model:ir.ui.view,arch_db:compute_product_margin.product_template_form_view
+msgid "Product Margin"
+msgstr "Margen de producto"
+
+#. module: compute_product_margin
+#: model:ir.model,name:compute_product_margin.model_product_template
+msgid "Product Template"
+msgstr "Plantilla de producto"
+
+#. module: compute_product_margin
+#: code:addons/compute_product_margin/models/product_category.py:14
+#: model:ir.model.fields,field_description:compute_product_margin.field_product_category_product_ids
+#, python-format
+msgid "Products"
+msgstr "Productos"
+
+#. module: compute_product_margin
+#: code:addons/compute_product_margin/models/product_category.py:17
+#: code:addons/compute_product_margin/models/product_template.py:19
+#: model:ir.model.fields,field_description:compute_product_margin.field_product_category_profit_percent
+#: model:ir.model.fields,field_description:compute_product_margin.field_product_product_profit_percent
+#: model:ir.model.fields,field_description:compute_product_margin.field_product_template_profit_percent
+#, python-format
+msgid "Profit Percent"
+msgstr "Porcentaje de beneficio"
+
+#. module: compute_product_margin
+#: model:ir.ui.view,arch_db:compute_product_margin.compute_product_margin_form_view
+msgid "Select the categories to compute the product margin. Leave it empty to apply to all the categories."
+msgstr "Selecciona las categorías para calcular el margen de producto. Déjalo vacío para aplicar a todas las categorías."
+
+#. module: compute_product_margin
+#: code:addons/compute_product_margin/models/product_template.py:27
+#, python-format
+msgid "Set a Base Price!"
+msgstr "Especifica un precio base!"
+
+#. module: compute_product_margin
+#: code:addons/compute_product_margin/models/product_template.py:29
+#, python-format
+msgid "Set a Profit Percent!"
+msgstr "Especifica un porcentaje de beneficio!"
+
+#. module: compute_product_margin
+#: model:ir.model,name:compute_product_margin.model_compute_product_margin
+msgid "compute.product.margin"
+msgstr "compute.product.margin"
