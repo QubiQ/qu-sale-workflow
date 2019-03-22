@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2019 Valentin Vinagre <valentin.vinagre@qubiq.es>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="warranty_res_company_form" model="ir.ui.view">
+        <field name="name">warranty.res.company.form</field>
+        <field name="model">res.company</field>
+        <field name="priority" eval="30"/>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page string="Warranty" name="page_warranty">
+                    <group>
+                        <field name="warranty_account_income_id"/>
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+</odoo>

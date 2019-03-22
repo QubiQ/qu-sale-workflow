@@ -1,0 +1,79 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* warranty_sales_invoice
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-22 12:18+0000\n"
+"PO-Revision-Date: 2019-03-22 13:21+0100\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 1.7.4\n"
+
+#. module: warranty_sales_invoice
+#: model:ir.model,name:warranty_sales_invoice.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: warranty_sales_invoice
+#: code:addons/warranty_sales_invoice/models/res_company.py:14
+#: model:ir.model.fields,help:warranty_sales_invoice.field_res_company__warranty_account_income_id
+#, python-format
+msgid "Default account for the product warranty."
+msgstr "Cuenta por defecto para el producto garantía."
+
+#. module: warranty_sales_invoice
+#: code:addons/warranty_sales_invoice/models/res_company.py:12
+#: model:ir.model.fields,field_description:warranty_sales_invoice.field_res_company__warranty_account_income_id
+#, python-format
+msgid "Income Warranty Account"
+msgstr "Cuenta de ingresos para garantía"
+
+#. module: warranty_sales_invoice
+#: model:ir.model,name:warranty_sales_invoice.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: warranty_sales_invoice
+#: code:addons/warranty_sales_invoice/wizards/sale_advance_payment_inv.py:52
+#: code:addons/warranty_sales_invoice/wizards/sale_advance_payment_inv.py:122
+#, python-format
+msgid "Need configured the warranty account in the company."
+msgstr "Necesita configurar la cuenta de garantía en la empresa."
+
+#. module: warranty_sales_invoice
+#: model:ir.model,name:warranty_sales_invoice.model_sale_advance_payment_inv
+msgid "Sales Advance Payment Invoice"
+msgstr "Factura de pago de anticipo de ventas"
+
+#. module: warranty_sales_invoice
+#: code:addons/warranty_sales_invoice/wizards/sale_advance_payment_inv.py:28
+#, python-format
+msgid "The value of warranty must be positive."
+msgstr "El valor de la garantía debe ser positivo."
+
+#. module: warranty_sales_invoice
+#: model_terms:ir.ui.view,arch_db:warranty_sales_invoice.warranty_res_company_form
+msgid "Warranty"
+msgstr "Garantía"
+
+#. module: warranty_sales_invoice
+#: code:addons/warranty_sales_invoice/models/account_invoice.py:11
+#: model:ir.model.fields,field_description:warranty_sales_invoice.field_account_invoice__warranty_check
+#, python-format
+msgid "Warranty Invoice"
+msgstr "Factura de garantía"
+
+#. module: warranty_sales_invoice
+#: code:addons/warranty_sales_invoice/wizards/sale_advance_payment_inv.py:13
+#: model:ir.model.fields,field_description:warranty_sales_invoice.field_sale_advance_payment_inv__warranty_percentage
+#, python-format
+msgid "Warranty Percentage"
+msgstr "Porcentaje de garantía"
