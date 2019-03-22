@@ -14,11 +14,6 @@ class SaleAdvancePaymentInv(models.TransientModel):
         default=0.0
     )
 
-    """
-    Herencia para:
-        * eliminacion del precio de garantia en la nueva factura.
-        *
-    """
     @api.multi
     def create_invoices(self):
         sale_orders = self.env['sale.order'].browse(
@@ -75,11 +70,6 @@ class SaleAdvancePaymentInv(models.TransientModel):
             # crea la factura normal....
             res = super(SaleAdvancePaymentInv, self).create_invoices()
         else:
-            # se debe de realizar el super y despues realizar otra vez el super con el cambio
-            # de la garantia... en caso de que tenga unicamente 1 factura.... si tiene > 1
-            # se debe de modificar la factura existente y aumentar la cantidad de la linea del
-            # producto de garantia, ademas de poner en la factura una marca de que es de garantia
-            # para poder diferenciarla.....(field = warranty_check)
             for order in sale_orders:
                 total = self.amount
                 warranty = False
