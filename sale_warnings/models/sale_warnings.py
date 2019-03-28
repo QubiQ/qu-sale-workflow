@@ -35,9 +35,9 @@ class SaleOrderPaymentsWarnings(osv.osv):
                     cr, uid, ids, title=title, message=message,
                     action_id=action_id['id'], target='new', ctx=context
                 )
-            return super(SaleOrderPaymentsWarnings, self).create_invoices(
+        return super(SaleOrderPaymentsWarnings, self).create_invoices(
                 cr, uid, ids, context
-            )
+        )
 
 
 class SaleMakeINvoiceWarnings(osv.osv):
