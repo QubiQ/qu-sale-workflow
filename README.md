@@ -17,6 +17,7 @@ addon | version | summary
 [tax_name_in_report](tax_name_in_report/) | 11.0.1.0.0 | Makes sale/invoice reports appear with the tax name instead of the tax code.
 [sale_early_payment_discount](sale_early_payment_discount/) | 11.0.1.0.0 | Adds early payment discount
 [sale_promotion](sale_promotion/) | 11.0.1.0.1 | Add promotions (3x2, free product, etc) to sale orders
+[sale_pricelist_line](sale_pricelist_line/) | 11.0.1.0.0 | Allows to display the pricelist lines in a view.
 [validate_partner](validate_partner/) | 11.0.1.0.0 | Demand a validation for every new partner
 [validate_product](validate_product/) | 11.0.1.0.0 | Demand a validation for every new product
 

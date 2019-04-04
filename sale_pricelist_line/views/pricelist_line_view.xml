@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Copyright 2019 Joan Segui <joan.segui@qubiq.es>
+    License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).-->
+
+<odoo>
+	<record id="pricelist_line_tree_view" model="ir.ui.view">
+	    <field name="name">pricelist.line.tree.view</field>
+	    <field name="model">product.pricelist.item</field>
+	    <field name="arch" type="xml">
+	        <tree string="Pricelist Line">
+	            <field name="name" string="Applicable On"/>
+                <field name="min_quantity"/>
+                <field name="date_start"/>
+                <field name="date_end"/>
+                <field name="price" string="Price"/>
+                <field name="pricelist_id" string="Pricelist Name"/>
+	        </tree>
+	    </field>
+	</record>
+
+	<record id="pricelist_line_search_view" model="ir.ui.view">
+	    <field name="name">pricelist.line.search.view</field>
+	    <field name="model">product.pricelist.item</field>
+	    <field name="arch" type="xml">
+	        <search string="Pricelist Line">
+	            <field name="name" string="product" filter_domain="[('name','ilike', self)]"/>
+	            <field name="pricelist_id" string="pricelist" filter_domain="[('pricelist_id','ilike',self)]"/>
+	        </search>
+	    </field>
+	</record>
+
+    <record id="action_pricelist_line" model="ir.actions.act_window">
+        <field name="name">Pricelist Line</field>
+	    <field name="res_model">product.pricelist.item</field>
+	    <field name="view_type">form</field>
+	    <field name="view_mode">tree,form</field>
+	    <field name="view_id" ref="pricelist_line_tree_view"/>
+	    <field name="search_view_id" ref="pricelist_line_search_view"/>
+    </record>
+
+    <menuitem
+		name="Pricelist Line"
+        parent="sale.product_menu_catalog"
+        action="action_pricelist_line"
+        id="menu_action_pricelist_line"
+        sequence="3"/>
+</odoo>
