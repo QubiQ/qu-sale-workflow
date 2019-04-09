@@ -1,6 +1,6 @@
 #
-Qu-sale-workflow Odoo v.11
-=============================
+Qu-sale-workflow Odoo v.12
+==========================
 
 [//]: # (addons)
 
